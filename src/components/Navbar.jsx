@@ -31,14 +31,16 @@ function Navbar() {
           <div className="col-6">
             {/* adesso creo il bottone con il click aggiorna il valore di budgetMode  */}
             <button
-              className="btn btn-primary m-1"
+              className={`btn ${
+                budgetMode ? `btn-primary` : `btn-success`
+              } m-1`}
               onClick={() =>
                 //adesso riesco a vedere lo stato
                 setbudgetMode(!budgetMode, console.log(!budgetMode))
               }
             >
               {budgetMode
-                ? "Disattiva Modalità Budget "
+                ? "Disattiva Modalità Budget  "
                 : "Attiva Modalità Budget"}
             </button>
           </div>
