@@ -6,6 +6,7 @@ import { useBudget } from "../contexts/BudgetContext";
 
 function Products() {
   const [datas, setDatas] = useState([]);
+  const { budgetMode, setBudgetMode } = useBudget(); // destruture
 
   // faccio la chiamata axios per recuperare l'array e inserirli in data
   const fetchData = () => {

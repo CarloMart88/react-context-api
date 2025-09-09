@@ -12,7 +12,7 @@ const BudgetProvider = ({ children }) => {
   const value = { budgetMode, setbudgetMode };
 
   return (
-    <budgetContext.Provider value={value}>{childern}</budgetContext.Provider>
+    <BudgetContext.Provider value={value}>{children}</BudgetContext.Provider>
   );
 };
 
@@ -24,4 +24,4 @@ const useBudget = () => {
 };
 
 // ed esporto tutto
-export default { BudgetProvider, useBudget };
+export { BudgetProvider, useBudget };
