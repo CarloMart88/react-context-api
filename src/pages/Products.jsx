@@ -15,9 +15,17 @@ function Products() {
       .then((resp) => setDatas(resp.data));
   };
 
-  console.log(datas);
+  console.log(budgetMode);
   // quindi al caricamento della componente avverà la chiamata
   useEffect(fetchData, []);
+
+  /*MILESTONE 3
+
+Modificate la pagina dei prodotti:
+
+Recuperate il valore budgetMode usando il context
+Se budgetMode === true, mostrate solo i prodotti con price <= 30
+Altrimenti, mostrare tutti i prodotti normalmente*/
 
   return (
     <div className="container my-1">

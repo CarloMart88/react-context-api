@@ -12,7 +12,7 @@ Il bottone deve cambiare etichetta in base allo stato (Attiva Modalità Budget /
 function Navbar() {
   //recupero useBudget e lo destrutturo
   const { budgetMode, setbudgetMode } = useBudget();
-  //
+
   return (
     <div className="container my-1">
       <div className="row">
@@ -32,7 +32,7 @@ function Navbar() {
             {/* adesso creo il bottone con il click aggiorna il valore di budgetMode  */}
             <button
               className={`btn ${
-                budgetMode ? `btn-primary` : `btn-success`
+                budgetMode ? `btn-secondary` : `btn-success`
               } m-1`}
               onClick={() =>
                 //adesso riesco a vedere lo stato
