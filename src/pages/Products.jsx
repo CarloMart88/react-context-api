@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+//richiamo use useBudget
+import { useBudget } from "../contexts/BudgetContext";
 
 function Products() {
   const [datas, setDatas] = useState([]);
