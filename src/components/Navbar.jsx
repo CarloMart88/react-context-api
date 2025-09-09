@@ -36,7 +36,7 @@ function Navbar() {
               } m-1`}
               onClick={() =>
                 //adesso riesco a vedere lo stato
-                setbudgetMode(!budgetMode, console.log(!budgetMode))
+                setbudgetMode(!budgetMode)
               }
             >
               {budgetMode

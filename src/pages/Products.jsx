@@ -16,6 +16,7 @@ function Products() {
   };
 
   console.log(budgetMode);
+  // con il console.log volevo controllare che lo stato cambiasse
   // quindi al caricamento della componente avverà la chiamata
   useEffect(fetchData, []);
 
