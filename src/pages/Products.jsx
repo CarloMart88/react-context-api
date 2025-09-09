@@ -24,7 +24,7 @@ function Products() {
 
 Modificate la pagina dei prodotti:
 
-Recuperate il valore budgetMode usando il context
+Recuperate il valore budgetMode usando il context ok 
 Se budgetMode === true, mostrate solo i prodotti con price <= 30
 Altrimenti, mostrare tutti i prodotti normalmente*/
 
@@ -34,6 +34,10 @@ Altrimenti, mostrare tutti i prodotti normalmente*/
         {/* carta */}
         {datas.map((info) => {
           const { id, title, price, description, category, image } = info;
+          {
+            /* in react quando un componente di un map ha un return null React non lo mostra quindi mettendo questa condizione salto un filtraggio  */
+          }
+          if (budgetMode && info.price > 30) return null;
           return (
             <div className="col-5 g-3" key={id}>
               <div className="card h-100 d-flex flex-column ">
